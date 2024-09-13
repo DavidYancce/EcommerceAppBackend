@@ -15,15 +15,7 @@ public class User {
     @GeneratedValue
     private Long id;
     private String email;
-
-    @Setter(AccessLevel.NONE)
     private String password;
-
     private String fullName;
     public User() {}
-
-    public void setPassword(String password) {
-        //TODO: encrypt password
-        this.password = password;
-    }
 }
