@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: exchange-project
+  datasource:
+    url: jdbc:oracle:thin:@//[host]:[port]/XEPDB1
+    username: [username]
+    password: [password]
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update
+        dialect: org.hibernate.dialect.OracleDialect
+        default_schema: EXCHANGE_APP
+        boot:
+          allow_jdbc_metadata_access: false
+    show-sql: true
