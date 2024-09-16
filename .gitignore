@@ -32,6 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-#Config
-src/main/config/*
-!/src/main/config/*.example
+#Applications properties
+/src/main/resources/application.properties
+!/src/main/resources/application.properties.example
