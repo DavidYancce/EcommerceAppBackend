@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "APP_ROLE")
+@Table(name = "APP_ROLE", schema = "EXCHANGE_APP")
 @Data
 public class Role {
     @Id
