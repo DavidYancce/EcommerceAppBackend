@@ -6,6 +6,7 @@ import com.exchangeproject.entities.User;
 import com.exchangeproject.dto.LoginUserDto;
 import com.exchangeproject.response.LoginResponse;
 import com.exchangeproject.service.AuthenticationService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/auth")
 @RestController
+@SecurityRequirements() // Disable security for this controller
 public class AuthenticationController {
     private final JwtService jwtService;
 
