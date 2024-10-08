@@ -1,4 +1,4 @@
-package com.ecommerceproject.dto; // Cambia el paquete según la estructura de tu proyecto
+package com.ecommerceproject.modules.auth.dto; // Cambia el paquete según la estructura de tu proyecto
 
 import lombok.Getter;
 import lombok.Setter;

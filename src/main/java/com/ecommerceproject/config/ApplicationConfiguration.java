@@ -1,6 +1,6 @@
 package com.ecommerceproject.config;
 
-import com.ecommerceproject.domain.port.UserRepository;
+import com.ecommerceproject.modules.user.repositories.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

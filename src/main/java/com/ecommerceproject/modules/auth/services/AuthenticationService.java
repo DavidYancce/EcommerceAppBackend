@@ -1,13 +1,13 @@
-package com.ecommerceproject.application.service;
+package com.ecommerceproject.modules.auth.services;
 
-import com.ecommerceproject.dto.LoginUserDto;
-import com.ecommerceproject.dto.RegisterUserDto;
-import com.ecommerceproject.domain.model.Role;
-import com.ecommerceproject.domain.model.User;
+import com.ecommerceproject.modules.auth.dto.LoginUserDto;
+import com.ecommerceproject.modules.auth.dto.RegisterUserDto;
+import com.ecommerceproject.modules.user.entity.Role;
+import com.ecommerceproject.modules.user.entity.User;
 import com.ecommerceproject.enums.RoleEnum;
 import com.ecommerceproject.exceptions.EmailAlreadyExistsException;
-import com.ecommerceproject.domain.port.RoleRepository;
-import com.ecommerceproject.domain.port.UserRepository;
+import com.ecommerceproject.modules.user.repositories.RoleRepository;
+import com.ecommerceproject.modules.user.repositories.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,7 +1,7 @@
-package com.ecommerceproject.domain.service;
+package com.ecommerceproject.modules.user.services;
 
-import com.ecommerceproject.domain.model.User;
-import com.ecommerceproject.domain.port.UserRepository;
+import com.ecommerceproject.modules.user.entity.User;
+import com.ecommerceproject.modules.user.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
