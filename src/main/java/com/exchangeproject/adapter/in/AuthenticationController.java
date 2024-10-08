@@ -1,11 +1,11 @@
-package com.exchangeproject.controller;
+package com.exchangeproject.adapter.in;
 
 import com.exchangeproject.dto.RegisterUserDto ;
-import com.exchangeproject.service.JwtService;
-import com.exchangeproject.entities.User;
+import com.exchangeproject.application.service.JwtService;
+import com.exchangeproject.domain.model.User;
 import com.exchangeproject.dto.LoginUserDto;
 import com.exchangeproject.response.LoginResponse;
-import com.exchangeproject.service.AuthenticationService;
+import com.exchangeproject.application.service.AuthenticationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,4 @@
-package com.exchangeproject.service;
+package com.exchangeproject.application.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

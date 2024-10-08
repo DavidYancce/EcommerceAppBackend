@@ -1,6 +1,6 @@
-package com.exchangeproject.service;
+package com.exchangeproject.application.service;
 
-import com.exchangeproject.repositories.UserRepository;
+import com.exchangeproject.domain.port.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,7 +1,7 @@
-package com.exchangeproject.controller;
+package com.exchangeproject.adapter.in;
 
-import com.exchangeproject.entities.User;
-import com.exchangeproject.service.UserService;
+import com.exchangeproject.domain.model.User;
+import com.exchangeproject.domain.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

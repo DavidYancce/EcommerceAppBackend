@@ -1,4 +1,4 @@
-package com.exchangeproject.security;
+package com.exchangeproject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

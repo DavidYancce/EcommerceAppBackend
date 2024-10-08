@@ -20,9 +20,12 @@ public class GlobalExceptionHandler {
 
         if (exception instanceof BadCredentialsException) {
             errorDetail = ProblemDetail.forStatusAndDetail(HttpStatusCode.valueOf(401), exception.getMessage());
-            errorDetail.setProperty("description", "The username or password is incorrect");
+            errorDetail.setProperty("description", "The email or password is incorrect");
+        }
 
-            return errorDetail;
+        if (exception instanceof EmailAlreadyExistsException) {
+            errorDetail = ProblemDetail.forStatusAndDetail(HttpStatusCode.valueOf(409), exception.getMessage());
+            errorDetail.setProperty("description", "The email already exists. Please use a different email address.");
         }
 
         if (exception instanceof AccountStatusException) {
