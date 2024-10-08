@@ -2,10 +2,11 @@ package com.ecommerceproject.modules.auth.services;
 
 import com.ecommerceproject.modules.auth.dto.LoginUserDto;
 import com.ecommerceproject.modules.auth.dto.RegisterUserDto;
-import com.ecommerceproject.domain.model.Role;
+import com.ecommerceproject.modules.user.entity.Role;
 import com.ecommerceproject.modules.user.entity.User;
 import com.ecommerceproject.enums.RoleEnum;
 import com.ecommerceproject.exceptions.EmailAlreadyExistsException;
+import com.ecommerceproject.modules.user.repositories.RoleRepository;
 import com.ecommerceproject.modules.user.repositories.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,7 +19,7 @@ import java.util.Optional;
 public class AuthenticationService {
     private final UserRepository userRepository;
 
-    private final User.RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -26,7 +27,7 @@ public class AuthenticationService {
 
     public AuthenticationService(
             UserRepository userRepository,
-            User.RoleRepository roleRepository,
+            RoleRepository roleRepository,
             AuthenticationManager authenticationManager,
             PasswordEncoder passwordEncoder
     ) {
