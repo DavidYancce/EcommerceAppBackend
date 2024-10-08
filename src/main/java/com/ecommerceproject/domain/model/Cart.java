@@ -1,5 +1,6 @@
 package com.ecommerceproject.domain.model;
 
+import com.ecommerceproject.modules.user.entity.User;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;

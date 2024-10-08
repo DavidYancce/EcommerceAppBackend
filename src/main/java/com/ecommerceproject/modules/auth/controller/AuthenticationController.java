@@ -1,11 +1,11 @@
-package com.ecommerceproject.adapter.in;
+package com.ecommerceproject.modules.auth.controller;
 
-import com.ecommerceproject.application.service.AuthenticationService;
-import com.ecommerceproject.application.service.JwtService;
-import com.ecommerceproject.domain.model.User;
-import com.ecommerceproject.dto.RegisterUserDto ;
-import com.ecommerceproject.dto.LoginUserDto;
-import com.ecommerceproject.response.LoginResponse;
+import com.ecommerceproject.modules.auth.services.AuthenticationService;
+import com.ecommerceproject.modules.auth.services.JwtService;
+import com.ecommerceproject.modules.user.entity.User;
+import com.ecommerceproject.modules.auth.dto.RegisterUserDto;
+import com.ecommerceproject.modules.auth.dto.LoginUserDto;
+import com.ecommerceproject.modules.auth.dto.LoginResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

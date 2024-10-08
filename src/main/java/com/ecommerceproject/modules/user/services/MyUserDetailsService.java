@@ -1,6 +1,6 @@
-package com.ecommerceproject.application.service;
+package com.ecommerceproject.modules.user.services;
 
-import com.ecommerceproject.domain.port.UserRepository;
+import com.ecommerceproject.modules.user.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

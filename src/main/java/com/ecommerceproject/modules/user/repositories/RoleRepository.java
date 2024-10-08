@@ -1,4 +1,4 @@
-package com.ecommerceproject.domain.port;
+package com.ecommerceproject.modules.user.repositories;
 
 import com.ecommerceproject.domain.model.Role;
 import org.springframework.data.repository.CrudRepository;

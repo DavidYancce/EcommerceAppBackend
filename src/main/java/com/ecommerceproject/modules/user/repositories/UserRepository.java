@@ -1,6 +1,6 @@
-package com.ecommerceproject.domain.port;
+package com.ecommerceproject.modules.user.repositories;
 
-import com.ecommerceproject.domain.model.User;
+import com.ecommerceproject.modules.user.entity.User;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,7 +1,7 @@
-package com.ecommerceproject.adapter.in;
+package com.ecommerceproject.modules.user.controller;
 
-import com.ecommerceproject.domain.model.User;
-import com.ecommerceproject.domain.service.UserService;
+import com.ecommerceproject.modules.user.entity.User;
+import com.ecommerceproject.modules.user.services.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
