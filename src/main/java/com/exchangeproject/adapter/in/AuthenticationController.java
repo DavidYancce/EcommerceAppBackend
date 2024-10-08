@@ -1,11 +1,12 @@
 package com.exchangeproject.adapter.in;
 
-import com.exchangeproject.dto.RegisterUserDto ;
+import com.exchangeproject.application.service.AuthenticationService;
 import com.exchangeproject.application.service.JwtService;
 import com.exchangeproject.domain.model.User;
+import com.exchangeproject.dto.RegisterUserDto ;
 import com.exchangeproject.dto.LoginUserDto;
 import com.exchangeproject.response.LoginResponse;
-import com.exchangeproject.application.service.AuthenticationService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/auth")
 @RestController
+@SecurityRequirements()
 public class AuthenticationController {
     private final JwtService jwtService;
 

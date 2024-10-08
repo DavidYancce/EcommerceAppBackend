@@ -1,1 +1,1 @@
-Proyect Name: Exchange Demo
+Proyect Name: Ecommerce App Backend
