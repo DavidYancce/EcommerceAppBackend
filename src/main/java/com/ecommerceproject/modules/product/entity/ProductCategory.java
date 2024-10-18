@@ -1,5 +1,6 @@
-package com.ecommerceproject.domain.model;
+package com.ecommerceproject.modules.product.entity;
 
+import com.ecommerceproject.modules.category.entity.Category;
 import jakarta.persistence.*;
 import lombok.Data;
 
