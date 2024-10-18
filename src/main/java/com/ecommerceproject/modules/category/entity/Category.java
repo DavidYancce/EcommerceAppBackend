@@ -1,4 +1,4 @@
-package com.ecommerceproject.domain.model;
+package com.ecommerceproject.modules.category.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -8,22 +8,15 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "TB_IMAGE", schema = "EXCHANGE_APP")
+@Table(name = "TB_CATEGORY", schema = "EXCHANGE_APP")
 @Data
-public class Image {
+public class Category {
     @Id
     @GeneratedValue
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
-    private Product product;
-
     @Column(nullable = false)
-    private String url;
-
-    @Column(name = "is_main", nullable = false)
-    private Boolean isMain;
+    private String name;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
