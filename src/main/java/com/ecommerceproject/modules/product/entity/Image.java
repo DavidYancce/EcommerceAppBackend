@@ -1,5 +1,6 @@
 package com.ecommerceproject.modules.product.entity;
 
+import com.ecommerceproject.domain.model.SKU;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -16,8 +17,8 @@ public class Image {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
-    private Product product;
+    @JoinColumn(name = "sku_id", nullable = false)
+    private SKU sku;
 
     @Column(unique = true, nullable = false)
     private String name;
