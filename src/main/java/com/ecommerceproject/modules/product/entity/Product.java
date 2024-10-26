@@ -1,5 +1,6 @@
 package com.ecommerceproject.modules.product.entity;
 
+import com.ecommerceproject.domain.model.Brand;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -7,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_PRODUCT", schema = "EXCHANGE_APP")
@@ -16,17 +18,15 @@ public class Product {
     @GeneratedValue
     private Integer id;
 
+    @ManyToOne
+    @JoinColumn(name = "brand_id", nullable = false)
+    private Brand brand;
+
     @Column(unique = true, nullable = false)
     private String code;
 
     @Column(nullable = false)
-    private Integer stock;
-
-    @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false, scale = 2)
-    private BigDecimal price;
 
     @Column(nullable = false)
     private String description;
