@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "TB_PERMISSION", schema = "EXCHANGE_APP")
 public class Permission {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
