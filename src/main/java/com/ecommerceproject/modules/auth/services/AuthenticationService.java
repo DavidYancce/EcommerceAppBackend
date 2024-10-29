@@ -1,17 +1,19 @@
 package com.ecommerceproject.modules.auth.services;
 
+import com.ecommerceproject.enums.RoleEnum;
+import com.ecommerceproject.exceptions.EmailAlreadyExistsException;
 import com.ecommerceproject.modules.auth.dto.LoginUserDto;
 import com.ecommerceproject.modules.auth.dto.RegisterUserDto;
 import com.ecommerceproject.modules.user.entity.Role;
 import com.ecommerceproject.modules.user.entity.User;
-import com.ecommerceproject.enums.RoleEnum;
-import com.ecommerceproject.exceptions.EmailAlreadyExistsException;
 import com.ecommerceproject.modules.user.repositories.RoleRepository;
 import com.ecommerceproject.modules.user.repositories.UserRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
 
@@ -49,33 +51,23 @@ public class AuthenticationService {
         user.setEmail(input.getEmail());
         user.setPassword(passwordEncoder.encode(input.getPassword()));
 
-        Role role;
-        if (input.getRole() != null && input.getRole().getId() != null) {
-            if (input.getRole().getId() == RoleEnum.ADMIN.getId()) {
-                throw new RuntimeException("No se cuenta con permisos para esta petición");
-            }
-
-            role = roleRepository.findById(input.getRole().getId())
-                    .orElseThrow(() -> new RuntimeException("Role not found"));
-        } else {
-            role = roleRepository.findById(RoleEnum.CUSTOMER.getId())
-                    .orElseThrow(() -> new RuntimeException("Default role not found"));
-        }
+        Role role = this.roleRepository
+                .findById(RoleEnum.BUYER.getId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Resource Not Found"));
 
         user.setRole(role);
-
         return userRepository.save(user);
     }
 
     public User authenticate(LoginUserDto input) {
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        input.getEmail(),
-                        input.getPassword()
-                )
+            new UsernamePasswordAuthenticationToken(
+                input.getEmail(),
+                input.getPassword()
+            )
         );
 
-        return userRepository.findByEmail(input.getEmail())
+        return userRepository.findByEmailWithPermissions(input.getEmail())
                 .orElseThrow();
     }
 }
