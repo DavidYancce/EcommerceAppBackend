@@ -1,11 +1,15 @@
 package com.ecommerceproject.domain.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "TB_PERMISSION", schema = "EXCHANGE_APP")
 public class Permission {
