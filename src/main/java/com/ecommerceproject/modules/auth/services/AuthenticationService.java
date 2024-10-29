@@ -40,7 +40,7 @@ public class AuthenticationService {
     public User signup(RegisterUserDto input) {
         Optional<User> existingUser = userRepository.findByEmail(input.getEmail());
         if (existingUser.isPresent()) {
-            throw new EmailAlreadyExistsException("El email " + input.getEmail() + " ya está registrado");
+            throw new EmailAlreadyExistsException(input.getEmail());
         }
 
         User user = new User();
