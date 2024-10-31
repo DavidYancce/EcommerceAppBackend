@@ -2,16 +2,19 @@ package com.ecommerceproject.modules.user.entity;
 
 import com.ecommerceproject.domain.model.RolePermission;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "TB_ROLE", schema = "EXCHANGE_APP")
-@Data
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,5 +32,5 @@ public class Role {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<RolePermission> rolePermissions;
+    private Set<RolePermission> rolePermissions = new HashSet<>();
 }

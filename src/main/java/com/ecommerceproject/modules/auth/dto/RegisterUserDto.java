@@ -1,5 +1,4 @@
-package com.ecommerceproject.modules.auth.dto; // Cambia el paquete según la estructura de tu proyecto
-
+package com.ecommerceproject.modules.auth.dto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +12,4 @@ public class RegisterUserDto {
     private String firstName;
 
     private String lastName;
-
-    private RoleDto role;
 }
