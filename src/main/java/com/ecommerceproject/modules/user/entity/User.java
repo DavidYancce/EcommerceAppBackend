@@ -6,7 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.ecommerceproject.domain.model.Company;
+import com.ecommerceproject.modules.company.entity.Company;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -25,7 +25,7 @@ public class User implements UserDetails {
     private Role role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "company_id", nullable = false)
+    @JoinColumn(name = "company_id")
     private Company company;
 
     @Column(name = "first_name", nullable = false)
