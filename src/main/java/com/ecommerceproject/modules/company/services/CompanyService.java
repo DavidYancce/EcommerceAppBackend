@@ -1,7 +1,6 @@
 package com.ecommerceproject.modules.company.services;
 
 import com.ecommerceproject.modules.brand.dto.BrandResponseDto;
-import com.ecommerceproject.modules.brand.entity.Brand;
 import com.ecommerceproject.modules.brand.repositories.BrandRepository;
 import com.ecommerceproject.modules.brand.services.BrandService;
 import com.ecommerceproject.modules.company.dto.CompanyResponseDto;

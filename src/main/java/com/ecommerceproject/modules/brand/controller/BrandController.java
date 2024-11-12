@@ -4,8 +4,6 @@ import com.ecommerceproject.modules.brand.dto.BrandResponseDto;
 import com.ecommerceproject.modules.brand.dto.CreateBrandDto;
 import com.ecommerceproject.modules.brand.dto.UpdateBrandDto;
 import com.ecommerceproject.modules.brand.services.BrandService;
-import com.ecommerceproject.modules.company.dto.CreateCompanyDto;
-import com.ecommerceproject.modules.company.dto.UpdateCompanyDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
