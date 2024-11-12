@@ -13,6 +13,4 @@ public class RegisterUserDto {
     private String firstName;
 
     private String lastName;
-
-    private RoleDto role;
 }
