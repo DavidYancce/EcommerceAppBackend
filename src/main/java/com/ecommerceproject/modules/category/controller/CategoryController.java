@@ -6,6 +6,7 @@ import com.ecommerceproject.modules.category.dto.UpdateCategoryDto;
 import com.ecommerceproject.modules.category.services.CategoryService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,12 +21,14 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
+    @PreAuthorize("hasAuthority('category.create')")
     @PostMapping
     public ResponseEntity<CategoryResponseDto> createCategory(@RequestBody @Valid CreateCategoryDto CreateCategoryDto) {
         return ResponseEntity.ok(categoryService.createCategory(CreateCategoryDto));
     }
 
     @GetMapping
+    @PreAuthorize("hasAuthority('category.getAll')")
     public ResponseEntity<List<CategoryResponseDto>> getAllCategories() {
         return ResponseEntity.ok(categoryService.getAllCategories());
     }

@@ -2,9 +2,13 @@ package com.ecommerceproject.domain.model;
 
 import com.ecommerceproject.modules.user.entity.Role;
 import jakarta.persistence.*;
-import com.ecommerceproject.domain.model.Permission;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "TB_ROLE_PERMISSION", schema = "EXCHANGE_APP")
 public class RolePermission {

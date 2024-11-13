@@ -1,17 +1,14 @@
 package com.ecommerceproject.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum RoleEnum {
-    ADMIN(1),
-    CUSTOMER(2),
-    ENTERPRISE(3);
+    BUYER(1L),
+    TEAM_MEMBER(2L);
 
-    private final int id;
-
-    RoleEnum(int id) {
+    private final Long id;
+    RoleEnum(Long id) {
         this.id = id;
-    }
-
-    public int getId() {
-        return id;
     }
 }
