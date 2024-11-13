@@ -2,15 +2,18 @@ package com.ecommerceproject.modules.brand.entity;
 
 import com.ecommerceproject.modules.company.entity.Company;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.validator.constraints.URL;
 
 import java.time.LocalDateTime;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "TB_BRAND", schema = "EXCHANGE_APP")
-@Data
 public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +29,8 @@ public class Brand {
     @Column(unique = true, nullable = false)
     private String name;
 
+    @URL(message = "Debe ser un URL válido")
+    @Column(name = "logo_url")
     private String logoUrl;
 
     @CreationTimestamp

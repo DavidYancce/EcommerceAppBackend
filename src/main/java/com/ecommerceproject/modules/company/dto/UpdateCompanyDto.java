@@ -19,6 +19,7 @@ public class UpdateCompanyDto {
 
     private String website;
 
+    //@URL(message = "Debe ser un URL válido")
     private String logoUrl;
 
     private MultipartFile logo;
