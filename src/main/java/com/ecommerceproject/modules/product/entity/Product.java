@@ -1,14 +1,12 @@
 package com.ecommerceproject.modules.product.entity;
 
-import com.ecommerceproject.domain.model.Brand;
+import com.ecommerceproject.modules.brand.entity.Brand;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(name = "TB_PRODUCT", schema = "EXCHANGE_APP")
@@ -22,7 +20,7 @@ public class Product {
     @JoinColumn(name = "brand_id", nullable = false)
     private Brand brand;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String code;
 
     @Column(nullable = false)

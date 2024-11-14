@@ -1,4 +1,4 @@
-package com.ecommerceproject.modules.category.dto;
+package com.ecommerceproject.modules.brand.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,10 +7,14 @@ import java.time.LocalDateTime;
 
 @Setter
 @Getter
-public class CategoryResponseDto {
+public class BrandResponseDto {
     private Long id;
 
+    private String code;
+
     private String name;
+
+    private String logoUrl;
 
     private LocalDateTime createdAt;
 

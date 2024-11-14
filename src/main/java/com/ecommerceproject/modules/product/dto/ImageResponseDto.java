@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 public class ImageResponseDto {
-    private Integer id;
+    private Long id;
     private String url;
     private Boolean isMain;
     private LocalDateTime createdAt;

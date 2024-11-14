@@ -1,4 +1,4 @@
-package com.ecommerceproject.modules.product.dto; // Cambia el paquete según la estructura de tu proyecto
+package com.ecommerceproject.modules.product.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,11 +12,7 @@ import java.util.List;
 public class UpdateProductDto {
     private String code;
 
-    private Integer stock;
-
     private String name;
-
-    private BigDecimal price;
 
     private String description;
 

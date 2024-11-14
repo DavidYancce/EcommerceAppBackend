@@ -3,5 +3,5 @@ package com.ecommerceproject.modules.category.repositories;
 import com.ecommerceproject.modules.category.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CategoryRepository extends JpaRepository<Category, Integer> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 }

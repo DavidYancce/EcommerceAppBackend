@@ -1,6 +1,6 @@
 package com.ecommerceproject.modules.user.entity;
 
-import com.ecommerceproject.domain.model.Company;
+import com.ecommerceproject.modules.company.entity.Company;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;

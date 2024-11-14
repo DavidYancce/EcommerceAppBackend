@@ -1,4 +1,4 @@
-package com.ecommerceproject.modules.category.dto; // Cambia el paquete según la estructura de tu proyecto
+package com.ecommerceproject.modules.category.dto;
 
 import lombok.Getter;
 import lombok.Setter;
